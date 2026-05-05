@@ -1,0 +1,94 @@
+:root {
+  --bg: #141414;
+  --card: #1f1f1f;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --accent: #e50914;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #0f0f0f 0%, #141414 30%, #141414 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.logo {
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.container {
+  padding: 24px 28px 36px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.status {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.movie-card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #2c2c2c;
+  display: block;
+}
+
+.movie-title {
+  margin: 0;
+  padding: 10px;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  min-height: 56px;
+}
