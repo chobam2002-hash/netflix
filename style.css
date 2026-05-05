@@ -87,8 +87,15 @@ body {
 
 .movie-title {
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 4px;
   font-size: 0.95rem;
   line-height: 1.35;
-  min-height: 56px;
+  min-height: 48px;
+}
+
+.movie-release-date {
+  margin: 0;
+  padding: 0 10px 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
 }

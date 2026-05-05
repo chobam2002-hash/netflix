@@ -48,8 +48,15 @@ function renderMovies(movies) {
     title.className = "movie-title";
     title.textContent = movie.title;
 
+    const releaseDate = document.createElement("p");
+    releaseDate.className = "movie-release-date";
+    releaseDate.textContent = movie.release_date
+      ? `Release date: ${movie.release_date}`
+      : "Release date: Unknown";
+
     card.appendChild(poster);
     card.appendChild(title);
+    card.appendChild(releaseDate);
     movieGrid.appendChild(card);
   }
 }
